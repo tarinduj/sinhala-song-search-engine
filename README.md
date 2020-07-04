@@ -2,7 +2,7 @@
 
 This work is inspired by the work at [pycon-2018-pyelasticsearch](https://github.com/julieqiu/pycon-2018-pyelasticsearch) repository.
 
-Follow the below steps to build the search engine locally. The build was only tested on OS X Catalina, hence the instruction are given for OS X.
+Follow the below steps to build the search engine locally. The build was only tested on OS X Catalina, hence the instructions are given for OS X.
 
 1. Install [Python 3.6.4] or a higher version.(https://www.python.org/downloads/).
 
