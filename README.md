@@ -42,4 +42,20 @@ pip install -r requirements.txt
 pip install -e .
 ```
 
-You're all set for the tutorial this Wednesday! :)
+## Indexing and Starting the the Flask App
+
+1. Index the songs:
+```
+python3 searchapp/index_songs.py
+```
+
+2. Start the Flask app.
+```
+python3 searchapp/run.py
+```
+- Make sure you can visit http://127.0.0.1:5000 in your browser. It should start up the search app.
+
+The first search box will search across titles, artist names, album names, and lyrics. The secondary search boxes allow you to filter results by artist name and album name.
+
+
+You can go ahead and start using the search engine now. :)
