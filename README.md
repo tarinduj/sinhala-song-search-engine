@@ -1,27 +1,43 @@
-# [Build a Search Engine with Python + Elasticsearch](https://us.pycon.org/2018/schedule/presentation/53/)
+# Sinhala Song Search Engine using Python + Elasticsearch
 
-- [Slides](http://bit.ly/pycon-es-slides)
-- [Video](https://www.youtube.com/watch?v=6_P_h2bDwYs)
+Follow the below steps to build the search engine locally. The build was only tested on OS X Catalina, hence the instruction are given for OS X.
 
-## Instructors
-- [Julie Qiu](http://twitter.com/jqiu25)
-- [Jim Grandpre](https://twitter.com/jimtla)
+1. Install [Python 3.6.4] or a higher version.(https://www.python.org/downloads/).
 
-# [Tutorial Prerequisites](/lessons/Lesson0_Prerequisites.md)
-In this tutorial, you will be building a search engine to search for product attributes using a Flask app and Elasticsearch.
+2. Install Elasticsearch 6.x and Kibana 6.x. (Note:[Java](https://java.com/en/download/) may be required.)
 
-To participate in this tutorial, you need the following:
-
-1) A computer with a good text editor (Vim, Sublime, Atom, etc.) installed on it.
-
-2) Complete the [Tutorial Prerequisites](/lessons/Lesson0_Prerequisites.md)
-
-# [Lesson 2](/lessons/Lesson2_Searching.md)
-Continuing from Part 1:
+  - For OS X, you can use [Homebrew](https://brew.sh/):
 ```
-git commit -am "session1 work"
-git fetch
-git checkout session2
+brew update
+brew install kibana@6.8
+brew install elasticsearch@6.8
+
+brew services start elasticsearch@6.8
+brew services start kibana@6.8
+```
+  - For Windows or Linux, see the Elastic downloads page for[Elasticsearch](https://www.elastic.co/downloads/elasticsearch) and [Kibana](https://www.elastic.co/downloads/kibana).
+
+  - Make sure you can visit http://localhost:5601/ and http://localhost:9200/ in your browser.
+
+3. Clone the `sinhala-song-search-engine` repository to your computer by running:
+```
+git clone https://github.com/tarinduj/sinhala-song-search-engine
+```
+
+4. In root of the repository, set up a virtualenv:
+```
+python3 -m venv venv
 source venv/bin/activate
-python searchapp/index_products.py
 ```
+
+5. Install the necessary python requirements:
+```
+pip install -r requirements.txt
+```
+
+6. Set up the searchapp:
+```
+pip install -e .
+```
+
+You're all set for the tutorial this Wednesday! :)
